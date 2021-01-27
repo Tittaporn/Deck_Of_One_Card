@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R01-Cn-ogS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="sGY-0Z-TKh">
+            <objects>
+                <viewController id="R01-Cn-ogS" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZa-P0-4L8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LiU-3z-fsz">
+                                <rect key="frame" x="117" y="328" width="180" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="cI4-qI-ej4"/>
+                                    <constraint firstAttribute="height" constant="250" id="sL0-O9-sge"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Value: Suit: )" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIB-BI-0ui">
+                                <rect key="frame" x="20" y="229" width="374" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewD-NW-fh8">
+                                <rect key="frame" x="60" y="638" width="294" height="51"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="Draw">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="R01-Cn-ogS" eventType="touchUpInside" id="i3D-Q9-MaF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dAx-36-yHn"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LiU-3z-fsz" firstAttribute="centerY" secondItem="dAx-36-yHn" secondAttribute="centerY" id="9nn-zE-hsv"/>
+                            <constraint firstItem="dAx-36-yHn" firstAttribute="trailing" secondItem="ewD-NW-fh8" secondAttribute="trailing" constant="60" id="C9x-eh-R18"/>
+                            <constraint firstItem="LiU-3z-fsz" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="EbY-lD-hcW"/>
+                            <constraint firstItem="dAx-36-yHn" firstAttribute="trailing" secondItem="dIB-BI-0ui" secondAttribute="trailing" constant="20" id="Idm-01-sEg"/>
+                            <constraint firstItem="ewD-NW-fh8" firstAttribute="top" secondItem="LiU-3z-fsz" secondAttribute="bottom" constant="60" id="dMd-YU-2uI"/>
+                            <constraint firstItem="LiU-3z-fsz" firstAttribute="top" secondItem="dIB-BI-0ui" secondAttribute="bottom" constant="60" id="dPW-Nh-o9b"/>
+                            <constraint firstItem="ewD-NW-fh8" firstAttribute="leading" secondItem="dAx-36-yHn" secondAttribute="leading" constant="60" id="f6A-lF-5Ei"/>
+                            <constraint firstItem="dIB-BI-0ui" firstAttribute="leading" secondItem="dAx-36-yHn" secondAttribute="leading" constant="20" id="x10-FL-nIa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="LiU-3z-fsz" id="jV6-p5-i6K"/>
+                        <outlet property="valueCardLabel" destination="dIB-BI-0ui" id="mom-Cb-HWM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKM-Hs-mUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365.21739130434787" y="-254.46428571428569"/>
+        </scene>
+    </scenes>
+</document>
